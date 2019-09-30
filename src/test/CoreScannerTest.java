@@ -23,7 +23,7 @@ public class CoreScannerTest {
 		assertNotNull(CS);
 
 		String[] actual = CS.scan();
-		CS
+		
 		String[] expected = { "PROGRAM", "INT", "ID[x]", "COMMA", "ID[y]", "COMMA", "ID[z]", "SEMICOLON", "BEGIN",
 				"INPUT", "ID[x]", "COMMA", "ID[y]", "SEMICOLON", "ID[z]", "ASSIGN", "ID[x]", "SEMICOLON", "ID[x]",
 				"ASSIGN", "ID[y]", "SEMICOLON", "ID[y]", "ASSIGN", "ID[z]", "SEMICOLON", "OUTPUT", "ID[x]", "SEMICOLON",
