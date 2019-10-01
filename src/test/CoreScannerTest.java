@@ -25,9 +25,7 @@ public class CoreScannerTest {
 		String[] actual = CS.scan();
 		
 		String[] expected = {"program","int","x",",","y",",","z",";","begin","input","x",",","y",";","z",":","=","x",";","x",":","=","y",";","y",":","=","z",";","output","x",";","output","y",";","end"};
-		for(int i = 0; i<actual.length;i++) {
-		System.out.println(actual[i]);
-		}
+		
 		Assert.assertArrayEquals(expected, actual);
 	}
 	
