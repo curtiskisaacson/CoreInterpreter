@@ -45,9 +45,7 @@ public class CoreScannerTest {
 		String[] actual = CS.scan();
 		
 		String[] expected = {"program","int","x",",","y",",","z",";","begin","input","x",",","y",";","z",":","=","x",";","x",":","=","y",";","y",":","=","z",";","output","x",";","output","y",";","end"};
-		for(int i = 0; i<actual.length;i++) {
-		System.out.println(actual[i]);
-		}
+		
 		Assert.assertArrayEquals(expected, actual);
 	}
 	
@@ -66,9 +64,7 @@ public class CoreScannerTest {
 		String[] actual = CS.scan();
 		
 		String[] expected = {"program","int","x",";","begin","x",":","=","5",";","end"};
-		for(int i = 0; i<actual.length;i++) {
-		System.out.println(actual[i]);
-		}
+		
 		Assert.assertArrayEquals(expected, actual);
 	}
 	
@@ -86,7 +82,7 @@ public class CoreScannerTest {
 
 		String[] actual = CS.scan();
 		actual = CS.preprocess(actual);
-		System.out.println(actual.toString());
+		
 		
 		String[] expected = { "PROGRAM", "INT", "ID[x]", "COMMA", "ID[y]", "COMMA", "ID[z]", "SEMICOLON", "BEGIN",
 				"INPUT", "ID[x]", "COMMA", "ID[y]", "SEMICOLON", "ID[z]", "ASSIGN", "ID[x]", "SEMICOLON", "ID[x]",
