@@ -103,6 +103,12 @@ public class CoreScanner {
 
 		tokenMap.put("while", "WHILE");
 		tokenMap.put("endwhile", "ENDWHILE");
+		
+		tokenMap.put("case", "CASE");
+		tokenMap.put("of", "OF");
+		tokenMap.put("id","ID");
+		tokenMap.put("|", "BAR");
+		
 
 		tokenMap.put(";", "SEMICOLON");
 		tokenMap.put(",", "COMMA");
@@ -123,8 +129,7 @@ public class CoreScanner {
 					// jumps an extra step to account for consuming the equals sign
 					i++;
 				} else {
-					System.out.println("ERROR: Equals sign does not follow colon");
-					System.exit(0);
+					preprocessedTokens.add("COLON");
 				}
 				// below finds if the token is > or >=
 			} else if (tokens[i].equals(">")) {
@@ -151,13 +156,18 @@ public class CoreScanner {
 				// and every character to make sure its a number or a letter
 				// Hopefully they dont care if we have variables with both numbers and letter
 				// like dog1
-
+				
+				
 				for (int j = 0; j < tokens[i].length(); j++) {
+					
+					
 					char c = tokens[i].charAt(j);
 					if ((!Character.isDigit(c)) && (!Character.isLetter(c))) {
 						System.out.println("ERROR: Character '" + c + "' is not allowed in input stream");
 						System.exit(0);
 					}
+					
+					
 
 				}
 
