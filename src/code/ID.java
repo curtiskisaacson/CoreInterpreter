@@ -2,7 +2,7 @@ package code;
 
 public class ID {
 	
-
+	
 	public ID() {
 
 	}
@@ -26,6 +26,7 @@ public class ID {
 		if (!ParseTree.symbolTable.containsKey(id)) {
 			ParseTree.symbolTable.put(id, null);
 			ParseTree.location++;
+			
 		} else {
 			System.out.println("ERROR: ID " + id + " is declared more than once");
 			System.exit(0);
