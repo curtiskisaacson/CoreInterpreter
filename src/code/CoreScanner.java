@@ -109,6 +109,7 @@ public class CoreScanner {
 		tokenMap.put("id","ID");
 		tokenMap.put("|", "BAR");
 		
+		
 
 		tokenMap.put(";", "SEMICOLON");
 		tokenMap.put(",", "COMMA");
