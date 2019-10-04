@@ -12,6 +12,8 @@ public class ParseTree {
 	public ParseTree(String[] tokens) {
 		
 		this.root = new Program();
+		
+		//resets the important elements if multiple calls to constructor
 		ParseTree.symbolTable.clear();
 		ParseTree.location = 0;
 		ParseTree.tokens = tokens;
