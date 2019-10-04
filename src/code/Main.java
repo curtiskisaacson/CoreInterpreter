@@ -7,10 +7,10 @@ public class Main {
 
         CoreScanner CS = null;
 		try {
-			CS = new CoreScanner("hey");
+			CS = new CoreScanner("CoreFiles/CoreSource4.core");
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			System.out.println("ERROR : File Not Found");
+			System.exit(0);
 		}
 
         Scanner in = new Scanner(System.in);
@@ -22,5 +22,6 @@ public class Main {
         for(int i = 0; i< tokens.length; i++){
             System.out.println(tokens[i]);
         }
+        in.close();
     }
 }
