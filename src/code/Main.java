@@ -7,7 +7,7 @@ public class Main {
 
         CoreScanner CS = null;
 		try {
-			CS = new CoreScanner("CoreFiles/CoreSource4.core");
+			CS = new CoreScanner("CoreFiles/CoreSource3.core");
 		} catch (FileNotFoundException e) {
 			System.out.println("ERROR : File Not Found");
 			System.exit(0);

@@ -103,19 +103,22 @@ public class CoreScanner {
 
 		tokenMap.put("while", "WHILE");
 		tokenMap.put("endwhile", "ENDWHILE");
-		
+
 		tokenMap.put("case", "CASE");
 		tokenMap.put("of", "OF");
-		tokenMap.put("id","ID");
+		tokenMap.put("id", "ID");
 		tokenMap.put("|", "BAR");
-		
-		
+
+		tokenMap.put("+", "PLUS");
+		tokenMap.put("*", "TIMES");
+		tokenMap.put("-", "MINUS");
 
 		tokenMap.put(";", "SEMICOLON");
 		tokenMap.put(",", "COMMA");
 		tokenMap.put("=", "EQUALS");
 		tokenMap.put("(", "LEFTPARENTHESIS");
 		tokenMap.put(")", "RIGHTPARENTHESIS");
+		tokenMap.put("!", "NOT");
 
 		ArrayList<String> preprocessedTokens = new ArrayList<>();
 		// below takes every token and changes it to the easier to read language.
@@ -152,23 +155,21 @@ public class CoreScanner {
 					preprocessedTokens.add("LESSTHAN");
 				}
 
-			} else {
+			}
+
+			else {
 				// gotta error check every character in the id token, thus we loop through each
 				// and every character to make sure its a number or a letter
 				// Hopefully they dont care if we have variables with both numbers and letter
 				// like dog1
-				
-				
+
 				for (int j = 0; j < tokens[i].length(); j++) {
-					
-					
+
 					char c = tokens[i].charAt(j);
 					if ((!Character.isDigit(c)) && (!Character.isLetter(c))) {
 						System.out.println("ERROR: Character '" + c + "' is not allowed in input stream");
 						System.exit(0);
 					}
-					
-					
 
 				}
 
