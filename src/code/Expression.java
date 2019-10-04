@@ -1,0 +1,41 @@
+package code;
+
+public class Expression {
+
+	private Term term = null;
+	private Expression expression = null;
+	private int prod = -1;
+	
+	public Expression() {
+
+		
+	}
+
+	public void parse() {
+
+		term = new Term();
+		term.parse();
+		
+		if(ParseTree.tokens[ParseTree.location].equals("PLUS")) {
+			prod = 2;
+			ParseTree.location++;
+			expression = new Expression();
+			expression.parse();
+		}else if (ParseTree.tokens[ParseTree.location].equals("MINUS")) {
+			prod = 3;
+			ParseTree.location++;
+			expression = new Expression();
+			expression.parse();
+		}else {
+			prod = 1;
+		}
+	}
+
+	public void execute() {
+
+	}
+
+	public void print() {
+
+	}
+}
