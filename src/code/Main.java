@@ -7,7 +7,7 @@ public class Main {
 
         CoreScanner CS = null;
 		try {
-			CS = new CoreScanner("CoreFiles/CoreSource1.core");
+			CS = new CoreScanner("CoreFiles/CoreSourceAdding2Ints.core");
 		} catch (FileNotFoundException e) {
 			System.out.println("ERROR : File Not Found");
 			System.exit(0);
@@ -19,9 +19,9 @@ public class Main {
         String[] tokens = CS.scan();
         tokens = CS.preprocess(tokens);
 
-//        for(int i = 0; i< tokens.length; i++){
-//            System.out.println(tokens[i]);
-//        }
+        for(int i = 0; i< tokens.length; i++){
+            System.out.println(tokens[i]);
+        }
         System.out.println("\nSCANNING COMPLETE");
         ParseTree parseTree = new ParseTree(tokens);
         CoreParser coreParser = new CoreParser(parseTree);

@@ -25,7 +25,7 @@ public class Factor {
 			}
 			
 			
-		}else if(Character.isDigit(ParseTree.tokens[ParseTree.location].charAt(3))){
+		}else if((Character.isDigit(ParseTree.tokens[ParseTree.location].charAt(3)))||(ParseTree.tokens[ParseTree.location].charAt(3) == '-')){
 			prod = 2;
 			constant = new Constant();
 			constant.parse();

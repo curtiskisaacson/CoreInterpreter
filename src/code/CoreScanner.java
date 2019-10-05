@@ -53,7 +53,6 @@ public class CoreScanner {
 		importantChars.add('-');
 		importantChars.add('/');
 		importantChars.add('<');
-		
 
 		// Reads in each line from file and adds keywords and other important words to
 		// tokens
@@ -113,7 +112,7 @@ public class CoreScanner {
 
 		tokenMap.put("+", "PLUS");
 		tokenMap.put("*", "TIMES");
-		tokenMap.put("-", "MINUS");
+		
 
 		tokenMap.put(";", "SEMICOLON");
 		tokenMap.put(",", "COMMA");
@@ -157,6 +156,12 @@ public class CoreScanner {
 					preprocessedTokens.add("LESSTHAN");
 				}
 
+			} else if (tokens[i].equals("-")) {
+				if(Character.isDigit(tokens[i+1].charAt(0))) {
+					tokens[i+1] = "-" +tokens[i+1];
+				}else {
+					preprocessedTokens.add("MINUS");
+				}
 			}
 
 			else {
@@ -168,7 +173,7 @@ public class CoreScanner {
 				for (int j = 0; j < tokens[i].length(); j++) {
 
 					char c = tokens[i].charAt(j);
-					if ((!Character.isDigit(c)) && (!Character.isLetter(c))) {
+					if ((!Character.isDigit(c)) && (!Character.isLetter(c) && !(c == '-'))) {
 						System.out.println("ERROR: Character '" + c + "' is not allowed in input stream");
 						System.exit(0);
 					}

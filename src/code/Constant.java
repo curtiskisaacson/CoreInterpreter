@@ -13,7 +13,7 @@ public class Constant {
 		
 		for(int i = 0; i<number.length(); i++) {
 			
-			if(!Character.isDigit(number.charAt(i))) {
+			if((!Character.isDigit(number.charAt(i)))&&(number.charAt(i) != '-')) {
 				System.out.println("ERROR: "+number+" is not a constant");
 				System.exit(0);
 			}

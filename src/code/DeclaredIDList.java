@@ -25,7 +25,7 @@ public class DeclaredIDList {
 		ArrayList<String> returnStrings = new ArrayList<>();
 		returnStrings.add(id.execute());
 		if(idList != null) {
-			returnStrings.addAll(0, idList.execute());
+			returnStrings.addAll(returnStrings.size(), idList.execute());
 		}
 		
 		return returnStrings;
