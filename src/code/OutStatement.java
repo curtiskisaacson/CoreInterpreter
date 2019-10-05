@@ -28,7 +28,8 @@ public class OutStatement {
 	}
 
 	public void execute() {
-
+		System.out.println(expression.execute());
+		
 	}
 
 	public void print() {

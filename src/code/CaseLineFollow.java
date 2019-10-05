@@ -1,5 +1,8 @@
 package code;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class CaseLineFollow {
 	private CaseLine caseLine = null;
 	
@@ -15,8 +18,12 @@ public class CaseLineFollow {
 		}
 	}
 	
-	public void execute() {
-		
+	public Map<Integer,Integer> execute() {
+		Map<Integer,Integer> returnMap = new HashMap<>();
+		if(caseLine != null) {
+			returnMap = caseLine.execute();
+		}
+		return returnMap;
 	}
 	
 	public void print() {

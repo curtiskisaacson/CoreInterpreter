@@ -1,5 +1,8 @@
 package code;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class InStatement {
 	private DeclaredIDList declaredIDList = null;
 	
@@ -26,7 +29,22 @@ public class InStatement {
 	}
 	
 	public void execute() {
+		Scanner in = new Scanner(System.in);
+		String value = in.next();
+		for(int i = 0;i<value.length();i++) {
+			if(!Character.isDigit(value.charAt(i))) {
+				System.out.println("ERROR:" + value+"is an invalid input");
+				System.exit(0);
+			}
+		}
+		int valueAsInt = Integer.parseInt(value);
 		
+		ArrayList<String> names = declaredIDList.execute();
+		
+		for(String name:names) {
+			ParseTree.symbolTable.put(name, valueAsInt);
+		}
+			
 	}
 	
 	public void print() {

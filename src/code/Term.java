@@ -25,8 +25,15 @@ public class Term {
 		
 	}
 	
-	public void execute() {
+	public int execute() {
+		int value = Integer.MIN_VALUE;
+		if(prod ==1) {
+			value = factor.execute();
+		}else if(prod ==2) {
+			value = factor.execute() * term.execute();
+		}
 		
+		return value;
 	}
 	
 	public void print() {

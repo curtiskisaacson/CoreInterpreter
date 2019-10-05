@@ -1,5 +1,9 @@
 package code;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
 public class CaseLine {
 
 	private Constant constant = null;
@@ -32,8 +36,20 @@ public class CaseLine {
 		caseLineFollow.parse();
 	}
 	
-	public void execute() {
+	public Map<Integer,Integer> execute() {
+		Map<Integer,Integer> casesAndValues = new HashMap<>();
+		ArrayList<Integer> cases = new ArrayList<>();
+		cases.add(constant.execute());
+		cases.addAll(constantList.execute());
+		int value = expression.execute();
 		
+		for(int i = 0; i<cases.size(); i++) {
+			casesAndValues.put(cases.get(i), value);
+		}
+		
+		casesAndValues.putAll(caseLineFollow.execute());
+		
+		return casesAndValues;
 	}
 	
 	public void print() {

@@ -47,10 +47,12 @@ public class Program {
 	}
 	
 	public void execute() {
-		
+		declSeq.execute();
+		stmtSeq.execute();
 	}
 	
 	public void print() {
+		
 		
 	}
 	

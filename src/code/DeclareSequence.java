@@ -20,7 +20,10 @@ public class DeclareSequence {
 	}
 	
 	public void execute() {
-		
+		decl.execute();
+		if(declseq != null) {
+			declseq.execute();
+		}
 	}
 	
 	public void print() {

@@ -1,7 +1,7 @@
 package code;
 
 public class DeclaredID {
-	
+	private String name = null;
 
 	public DeclaredID() {
 
@@ -16,10 +16,11 @@ public class DeclaredID {
 		}else {
 			ParseTree.location++;
 		}
+		name = id;
 	}
 
-	public void execute() {
-
+	public String execute() {
+		return name;
 	}
 
 	public void print() {

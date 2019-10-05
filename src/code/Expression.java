@@ -31,8 +31,16 @@ public class Expression {
 		}
 	}
 
-	public void execute() {
-
+	public int execute() {
+		int value = Integer.MAX_VALUE;
+		if(prod ==1) {
+			value = term.execute();
+		} else if(prod ==2) {
+			value = term.execute() + expression.execute();
+		}else if(prod ==3) {
+			value = term.execute() - expression.execute();
+		}
+		return value;
 	}
 
 	public void print() {

@@ -52,6 +52,8 @@ public class CoreScanner {
 		importantChars.add('*');
 		importantChars.add('-');
 		importantChars.add('/');
+		importantChars.add('<');
+		
 
 		// Reads in each line from file and adds keywords and other important words to
 		// tokens

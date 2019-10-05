@@ -33,7 +33,10 @@ public class AssignStatement {
 	}
 
 	public void execute() {
-
+		String name = declaredID.execute();
+		int value = expression.execute();
+		//remember that put also updates if name is already contained
+		ParseTree.symbolTable.put(name, value);
 	}
 
 	public void print() {

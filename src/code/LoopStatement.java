@@ -45,7 +45,9 @@ private StatementSequence stmtSeq = null;
 	}
 	
 	public void execute() {
-		
+		while(cond.execute() ) {
+			stmtSeq.execute();
+		}
 	}
 	
 	public void print() {

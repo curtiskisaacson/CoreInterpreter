@@ -28,7 +28,7 @@ public class Declare {
 	}
 	
 	public void execute() {
-		
+		idList.execute();
 	}
 	
 	public void print() {

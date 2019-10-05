@@ -1,5 +1,7 @@
 package code;
 
+import java.util.Map;
+
 public class CaseStatement {
 
 	private CaseLine caseLine = null;
@@ -58,6 +60,19 @@ public class CaseStatement {
 	}
 	
 	public void execute() {
+		
+		boolean caseFound = false;
+		String name = declaredID.execute();
+		Map<Integer,Integer> casesAndValues = caseLine.execute();
+		
+		int valueOfID = ParseTree.symbolTable.get(name);
+		if(casesAndValues.containsKey(valueOfID)) {
+			ParseTree.symbolTable.put(name, casesAndValues.get(valueOfID));
+		}else {
+			ParseTree.symbolTable.put(name, expression.execute());
+		}
+		
+		
 		
 	}
 	

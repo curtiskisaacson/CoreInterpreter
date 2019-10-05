@@ -21,7 +21,10 @@ public class StatementSequence {
 	}
 
 	public void execute() {
-
+		statement.execute();
+		if(stmtSeq != null) {
+			stmtSeq.execute();
+		}
 	}
 
 	public void print() {

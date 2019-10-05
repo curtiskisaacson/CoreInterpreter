@@ -1,6 +1,7 @@
 package code;
 
 public class Constant {
+	private int value;
 
 	public Constant() {
 		
@@ -18,13 +19,14 @@ public class Constant {
 			}
 			
 		}
+		value = Integer.parseInt(number);
 		
 		ParseTree.location++;
 		
 	}
 	
-	public void execute() {
-		
+	public int execute() {
+		return value;
 	}
 	
 	public void print() {

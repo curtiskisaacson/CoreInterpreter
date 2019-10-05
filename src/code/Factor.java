@@ -40,8 +40,16 @@ public class Factor {
 		}
 	}
 	
-	public void execute() {
-		
+	public int execute() {
+		int value = Integer.MAX_VALUE;
+		if(prod == 1) {
+			value = expression.execute();
+		}else if(prod == 2) {
+			value = constant.execute();
+		}else if(prod == 3) {
+			value = ParseTree.symbolTable.get(declaredID.execute());
+		}
+		return value;
 	}
 	
 	public void print() {

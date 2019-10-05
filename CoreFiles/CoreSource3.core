@@ -2,4 +2,5 @@ program
 int	x;
 begin
 x:=5;
+output x;
 end

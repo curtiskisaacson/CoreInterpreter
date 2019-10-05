@@ -52,8 +52,22 @@ private int prod = -1;
 		}
 	}
 	
-	public void execute() {
+	public boolean execute() {
+		boolean returnValue = false;
+		if(prod == 1) {
+			returnValue = comparator.execute();
+		}
 		
+		if(prod == 2) {
+			returnValue = !(condition.execute());
+		}
+		
+		if(prod == 3) {
+			returnValue = comparator.execute() || condition.execute();
+		}
+		
+		
+		return returnValue;
 	}
 	
 	public void print() {

@@ -1,5 +1,7 @@
 package code;
 
+import java.util.ArrayList;
+
 public class ConstantList {
 
 	private Constant constant = null;
@@ -23,8 +25,15 @@ public class ConstantList {
 
 	}
 
-	public void execute() {
-
+	public ArrayList<Integer> execute() {
+		ArrayList<Integer> returnList = new ArrayList<>();
+		returnList.add(constant.execute());
+		
+		if(constantList != null) {
+			returnList.addAll(constantList.execute());
+		}
+		
+		return returnList;
 	}
 
 	public void print() {
