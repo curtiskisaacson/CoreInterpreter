@@ -9,12 +9,12 @@ public class ID {
 
 	public void parse() {
 		// Checks to see if there is an ID token here.
-		if (!ParseTree.tokens[ParseTree.location].substring(0, 4).equals("ID[")) {
+		if (!ParseTree.tokens[ParseTree.location].substring(0, 3).equals("ID[")) {
 			System.out.println("ERROR: ID expected and not Found");
 			System.exit(0);
 		}
 		// gets the id without the brackets
-		String id = ParseTree.tokens[ParseTree.location].substring(3, ParseTree.tokens[ParseTree.location].length());
+		String id = ParseTree.tokens[ParseTree.location].substring(3, ParseTree.tokens[ParseTree.location].length()-1);
 
 		//checks if ID starts with digit
 		if (Character.isDigit(id.charAt(0))) {

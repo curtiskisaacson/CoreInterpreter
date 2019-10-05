@@ -5,6 +5,7 @@ public class Term {
 	private Factor factor = null;
 	private Term term = null;
 	private int prod = -1;
+	
 	public Term() {
 		
 	}

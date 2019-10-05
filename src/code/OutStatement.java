@@ -18,10 +18,10 @@ public class OutStatement {
 		expression = new Expression();
 		expression.parse();
 		
-		if(ParseTree.tokens[ParseTree.location] == "Semicolon") {
+		if(ParseTree.tokens[ParseTree.location] == "SEMICOLON") {
 			ParseTree.location++;
 		}else {
-			System.out.println("ERROR: Semicolon expected and not Found");
+			System.out.println("ERROR: Semicolon after output statement expected and not Found");
 			System.exit(0);
 		}
 

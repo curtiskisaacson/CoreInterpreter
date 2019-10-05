@@ -39,7 +39,7 @@ private StatementSequence stmtSeq = null;
 		if (ParseTree.tokens[ParseTree.location] == "SEMICOLON") {
 			ParseTree.location++;
 		} else {
-			System.out.println("ERROR: semicolon expected and not Found");
+			System.out.println("ERROR: Semicolon after loop statement expected and not Found");
 			System.exit(0);
 		}
 	}

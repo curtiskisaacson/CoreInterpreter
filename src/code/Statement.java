@@ -7,18 +7,48 @@ public class Statement {
 	private InStatement inStatement = null;
 	private OutStatement outStatement = null;
 	private CaseStatement caseStatement = null;
-	private int prodNum = -1;
+	private int prod = -1;
 	
 	public Statement() {
 		
 	}
 	
 	public void parse() {
-		switch(ParseTree.tokens[ParseTree.location]) {
+		String token = ParseTree.tokens[ParseTree.location];
 		
-		
-		
-		
+		if(token.equals("IF")) {
+			prod = 1;
+			ifStatement = new IfStatement();
+			ifStatement.parse();
+		}else if(token.equals("WHILE")) {
+			
+			prod = 2;
+			
+			loopStatement = new LoopStatement();
+			loopStatement.parse();
+			
+		}else if(token.equals("INPUT")) {
+			prod = 3;
+			inStatement = new InStatement();
+			inStatement.parse();
+			
+		}else if(token.equals("OUTPUT")) {
+			prod = 4;
+			outStatement = new OutStatement();
+			outStatement.parse();
+		}else if(token.equals("CASE")) {
+			prod = 5;
+			caseStatement = new CaseStatement();
+			caseStatement.parse();
+			
+		}else if((token.substring(0, 3).equals("ID["))) {
+			prod = 6;
+			assignStatement = new AssignStatement();
+			assignStatement.parse();
+			
+		}else {
+			System.out.println("ERROR: Expected Statement, was not found");
+			System.exit(0);
 		}
 	}
 	

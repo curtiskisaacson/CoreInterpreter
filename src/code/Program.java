@@ -37,6 +37,13 @@ public class Program {
 			System.exit(0);
 		}
 		
+		if(ParseTree.tokens[ParseTree.location] == "EOF") {
+			ParseTree.location++;
+		}else {
+			System.out.println("ERROR: End Of File expected and not Found");
+			System.exit(0);
+		}
+		
 	}
 	
 	public void execute() {

@@ -49,6 +49,13 @@ public class IfStatement {
 			System.out.println("ERROR: Unexpected Token within if statement");
 			System.exit(0);
 		}
+		
+		if(ParseTree.tokens[ParseTree.location] == "SEMICOLON") {
+			ParseTree.location++;
+		}else {
+			System.out.println("ERROR: Semicolon after if statement expected and not Found");
+			System.exit(0);
+		}
 
 	}
 

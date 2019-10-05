@@ -25,12 +25,12 @@ public class Factor {
 			}
 			
 			
-		}else if(Character.isDigit(ParseTree.tokens[ParseTree.location].charAt(0))){
+		}else if(Character.isDigit(ParseTree.tokens[ParseTree.location].charAt(3))){
 			prod = 2;
 			constant = new Constant();
 			constant.parse();
 			
-		}else if(Character.isDigit(ParseTree.tokens[ParseTree.location].charAt(0))) {
+		}else if(!Character.isDigit(ParseTree.tokens[ParseTree.location].charAt(3))) {
 			prod = 3;
 			declaredID = new DeclaredID();
 			declaredID.parse();

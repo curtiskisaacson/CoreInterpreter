@@ -8,7 +8,7 @@ public class Constant {
 	
 	public void parse() {
 		//checks each character in constant string is a constant
-		String number = ParseTree.tokens[ParseTree.location].substring(3, ParseTree.tokens[ParseTree.location].length());
+		String number = ParseTree.tokens[ParseTree.location].substring(3, ParseTree.tokens[ParseTree.location].length()-1);
 		
 		for(int i = 0; i<number.length(); i++) {
 			

@@ -48,6 +48,13 @@ public class CaseStatement {
 			System.exit(0);
 		}
 		
+		if(ParseTree.tokens[ParseTree.location] == "SEMICOLON") {
+			ParseTree.location++;
+		}else {
+			System.out.println("ERROR: semicolon after case statement expected and not Found");
+			System.exit(0);
+		}
+		
 	}
 	
 	public void execute() {
