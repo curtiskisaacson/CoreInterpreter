@@ -54,7 +54,7 @@ public class CaseLine {
 	
 	public void print() {
 		for (int i = 0; i < ParseTree.indentCount; i++) {
-			System.out.println("  ");
+			System.out.print("  ");
 		}
 		constant.print();
 		constantList.print();

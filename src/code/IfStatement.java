@@ -82,7 +82,7 @@ public class IfStatement {
 
 	public void print() {
 
-		System.out.println("if ");
+		System.out.print("if ");
 		condition.print();
 		System.out.print("then");
 		ParseTree.indentCount++;
@@ -94,6 +94,10 @@ public class IfStatement {
 			elseStmtSeq.print();
 			ParseTree.indentCount--;
 		}
-		System.out.println("endif");
+		System.out.println();
+		for (int i = 0; i < ParseTree.indentCount; i++) {
+			System.out.print("  ");
+		}
+		System.out.print("endif");
 	}
 }

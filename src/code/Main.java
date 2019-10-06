@@ -32,9 +32,9 @@ public class Main {
         CorePrinter corePrinter = new CorePrinter(parseTree);
         corePrinter.print();
         
-        CoreExecutor coreExecutor = new CoreExecutor(parseTree);
-        coreExecutor.execute();
-        System.out.println("\nEXECUTING COMPLETE");
+        //CoreExecutor coreExecutor = new CoreExecutor(parseTree);
+        //coreExecutor.execute();
+        //System.out.println("\nEXECUTING COMPLETE");
         
         
         

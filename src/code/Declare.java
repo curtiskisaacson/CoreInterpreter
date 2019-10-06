@@ -33,7 +33,7 @@ public class Declare {
 
 	public void print() {
 		for (int i = 0; i < ParseTree.indentCount; i++) {
-			System.out.println("  ");
+			System.out.print("  ");
 		}
 		System.out.print("int ");
 		idList.print();

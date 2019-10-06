@@ -43,5 +43,6 @@ public class AssignStatement {
 		declaredID.print();
 		System.out.print(":=");
 		expression.print();
+		System.out.print(";");
 	}
 }

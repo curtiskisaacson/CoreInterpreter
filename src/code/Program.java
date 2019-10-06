@@ -57,12 +57,13 @@ public class Program {
 		ParseTree.indentCount++;
 		
 		declSeq.print();
-		
-		System.out.println("begin");
+		System.out.println();
+		System.out.print("begin");
 		
 		stmtSeq.print();
 		
-		System.out.println("end");
+		System.out.println();
+		System.out.print("end");
 		ParseTree.indentCount--;
 		
 	}

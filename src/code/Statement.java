@@ -76,8 +76,9 @@ public class Statement {
 	}
 
 	public void print() {
+		System.out.println();
 		for (int i = 0; i < ParseTree.indentCount; i++) {
-			System.out.println("  ");
+			System.out.print("  ");
 		}
 		switch (prod) {
 		case 1:

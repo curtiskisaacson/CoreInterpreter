@@ -77,15 +77,20 @@ public class CaseStatement {
 	}
 	
 	public void print() {
-		System.out.println("case ");
+		System.out.print("case ");
 		declaredID.print();
-		System.out.print(" of");
+		System.out.println(" of");
 		ParseTree.indentCount++;
 		caseLine.print();
-		ParseTree.indentCount--;
-		System.out.println("else");
+		
+		System.out.println();
+		for (int i = 0; i < ParseTree.indentCount; i++) {
+			System.out.print("  ");
+		}
+		System.out.print("else ");
 		expression.print();
 		System.out.print(";");
+		ParseTree.indentCount--;
 		
 	}
 }

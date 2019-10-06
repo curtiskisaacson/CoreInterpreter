@@ -53,12 +53,16 @@ private StatementSequence stmtSeq = null;
 	}
 	
 	public void print() {
-		System.out.println("while");
+		System.out.print("while ");
 		cond.print();
-		System.out.print("begin");
+		System.out.print(" begin");
 		ParseTree.indentCount++;
 		stmtSeq.print();
 		ParseTree.indentCount--;
-		System.out.println("endwhile;");
+		System.out.println();
+		for (int i = 0; i < ParseTree.indentCount; i++) {
+			System.out.print("  ");
+		}
+		System.out.print("endwhile;");
 	}
 }

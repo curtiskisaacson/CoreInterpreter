@@ -47,7 +47,7 @@ public class InStatement {
 	}
 
 	public void print() {
-		System.out.println("input");
+		System.out.print("input ");
 		declaredIDList.print();
 		System.out.print(";");
 	}
