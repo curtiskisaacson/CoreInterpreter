@@ -53,7 +53,14 @@ public class CaseLine {
 	}
 	
 	public void print() {
-		
+		for (int i = 0; i < ParseTree.indentCount; i++) {
+			System.out.println("  ");
+		}
+		constant.print();
+		constantList.print();
+		System.out.print(":");
+		expression.print();
+		caseLineFollow.print();
 	}
 	
 }

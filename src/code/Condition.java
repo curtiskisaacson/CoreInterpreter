@@ -71,6 +71,21 @@ private int prod = -1;
 	}
 	
 	public void print() {
+		if(prod == 1) {
+			comparator.print();
+		}
 		
+		if(prod == 2) {
+			System.out.print("!(");
+		condition.print();
+		System.out.print(")");
+			
+		}
+		
+		if(prod == 3) {
+			comparator.print();
+			System.out.print(" or ");
+			condition.print();
+		}
 	}
 }

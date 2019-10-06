@@ -6,6 +6,7 @@ public class ConstantList {
 
 	private Constant constant = null;
 	private ConstantList constantList = null;
+	int prod = -1;
 
 	public ConstantList() {
 
@@ -14,6 +15,7 @@ public class ConstantList {
 	public void parse() {
 		if (ParseTree.tokens[ParseTree.location].equals("COMMA")) {
 			ParseTree.location++;
+			prod = 1;
 
 			constant = new Constant();
 			constant.parse();
@@ -27,16 +29,23 @@ public class ConstantList {
 
 	public ArrayList<Integer> execute() {
 		ArrayList<Integer> returnList = new ArrayList<>();
-		returnList.add(constant.execute());
-		
-		if(constantList != null) {
-			returnList.addAll(constantList.execute());
+
+		if (prod == 1) {
+			returnList.add(constant.execute());
+
+			if (constantList != null) {
+				returnList.addAll(constantList.execute());
+			}
 		}
-		
+
 		return returnList;
 	}
 
 	public void print() {
-
+		if (prod == 1) {
+			System.out.print(",");
+			constant.print();
+			constantList.print();
+		}
 	}
 }

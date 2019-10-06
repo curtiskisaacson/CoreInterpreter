@@ -53,6 +53,17 @@ public class Program {
 	
 	public void print() {
 		
+		System.out.println("program");
+		ParseTree.indentCount++;
+		
+		declSeq.print();
+		
+		System.out.println("begin");
+		
+		stmtSeq.print();
+		
+		System.out.println("end");
+		ParseTree.indentCount--;
 		
 	}
 	

@@ -24,7 +24,7 @@ public class DeclaredID {
 	}
 
 	public void print() {
-
+		System.out.print(name);
 	}
 
 }

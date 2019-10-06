@@ -44,6 +44,18 @@ public class Expression {
 	}
 
 	public void print() {
-
+		
+		if(prod ==1) {
+			term.print();
+		} else if(prod ==2) {
+			term.print();
+			System.out.println("+");
+			expression.print();
+		}else if(prod ==3) {
+			term.print();
+			System.out.println("-");
+			expression.print();
+		}
+		
 	}
 }

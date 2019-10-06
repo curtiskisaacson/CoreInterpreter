@@ -37,6 +37,12 @@ public class Term {
 	}
 	
 	public void print() {
-		
+		if(prod ==1) {
+			factor.print();
+		}else if(prod ==2) {
+			factor.print();
+			System.out.print("*"); 
+			factor.print();
+		}
 	}
 }

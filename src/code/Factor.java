@@ -53,6 +53,12 @@ public class Factor {
 	}
 	
 	public void print() {
-		
+		if(prod == 1) {
+			expression.print();
+		}else if(prod == 2) {
+			constant.print();
+		}else if(prod == 3) {
+			declaredID.print();
+		}
 	}
 }

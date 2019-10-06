@@ -27,6 +27,9 @@ public class DeclareSequence {
 	}
 	
 	public void print() {
-		
+		decl.print();
+		if(declseq != null) {
+			declseq.print();
+		}
 	}
 }

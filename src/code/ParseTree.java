@@ -5,6 +5,7 @@ import java.util.Map;
 
 public class ParseTree {
 
+	public static int indentCount = 0;
 	public static Map<String,Integer> symbolTable = new HashMap<>();
 	private Program root = null;
 	public static String[] tokens = null;

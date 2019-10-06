@@ -33,6 +33,8 @@ public class OutStatement {
 	}
 
 	public void print() {
-
+		System.out.println("output ");
+		expression.print();
+		System.out.print(";");
 	}
 }

@@ -13,6 +13,7 @@ public class CaseLineFollow {
 	
 	public void parse() {
 		if(ParseTree.tokens[ParseTree.location].equals("BAR")) {
+			ParseTree.location++;
 			caseLine = new CaseLine();
 			caseLine.parse();
 		}
@@ -27,6 +28,9 @@ public class CaseLineFollow {
 	}
 	
 	public void print() {
-		
+		if(caseLine != null) {
+		System.out.println("|");
+		caseLine.print();
+		}
 	}
 }

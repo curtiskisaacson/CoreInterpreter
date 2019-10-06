@@ -30,6 +30,6 @@ public class Constant {
 	}
 	
 	public void print() {
-		
+		System.out.print(value);
 	}
 }

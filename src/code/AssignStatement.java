@@ -40,6 +40,8 @@ public class AssignStatement {
 	}
 
 	public void print() {
-
+		declaredID.print();
+		System.out.print(":=");
+		expression.print();
 	}
 }

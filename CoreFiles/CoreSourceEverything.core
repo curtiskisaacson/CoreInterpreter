@@ -1,0 +1,33 @@
+program
+  int x,y,z,a,b;
+begin
+
+  input x,y;
+
+  if x < y then
+  	x := 100;
+  endif;
+  
+  output x;
+  output y;
+  
+  z := 2;
+  case z of
+      0 : 2
+    | 2 : 3
+    else 4
+  end;
+  
+  output z;
+  
+  a := 2; 
+  b := 64;
+  
+  while a < b begin
+  	a := a*a;
+  endwhile;
+  
+  output a;
+  output b;
+  
+end

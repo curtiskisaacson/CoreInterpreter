@@ -28,7 +28,10 @@ public class StatementSequence {
 	}
 
 	public void print() {
-
+		statement.print();
+		if(stmtSeq != null) {
+			stmtSeq.print();
+		}
 	}
 
 }

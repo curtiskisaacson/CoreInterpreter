@@ -1,5 +1,7 @@
 package code;
 
+import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
+
 public class LoopStatement {
 private Condition cond = null;
 private StatementSequence stmtSeq = null;
@@ -51,6 +53,12 @@ private StatementSequence stmtSeq = null;
 	}
 	
 	public void print() {
-		
+		System.out.println("while");
+		cond.print();
+		System.out.print("begin");
+		ParseTree.indentCount++;
+		stmtSeq.print();
+		ParseTree.indentCount--;
+		System.out.println("endwhile;");
 	}
 }

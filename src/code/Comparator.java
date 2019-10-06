@@ -64,7 +64,24 @@ public class Comparator {
 	}
 
 	public void print() {
+		switch (prod) {
+		case 1:
+			firstExpression.print();
+			System.out.print("=");
+			secondExpression.print();
+			break;
+		case 2:
+			firstExpression.print();
+			System.out.print("<");
+			secondExpression.print();
+			break;
+		case 3:
+			firstExpression.print();
+			System.out.print("<=");
+			secondExpression.print();
+			break;
 
+		}
 	}
 
 }

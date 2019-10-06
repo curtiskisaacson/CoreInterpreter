@@ -2,7 +2,7 @@ package code;
 
 public class ID {
 	
-	
+	private String name = "";
 	public ID() {
 
 	}
@@ -25,6 +25,7 @@ public class ID {
 		//checks for double declaration
 		if (!ParseTree.symbolTable.containsKey(id)) {
 			ParseTree.symbolTable.put(id, null);
+			name = id;
 			ParseTree.location++;
 			
 		} else {
@@ -38,7 +39,7 @@ public class ID {
 	}
 
 	public void print() {
-
+		System.out.print(name);
 	}
 
 }

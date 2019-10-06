@@ -24,6 +24,10 @@ public class IDList {
 	}
 	
 	public void print() {
-		
+		id.print();
+		if(idList != null) {
+			System.out.print(",");
+			idList.print();
+		}
 	}
 }
