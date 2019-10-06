@@ -84,12 +84,12 @@ public class IfStatement {
 
 		System.out.print("if ");
 		condition.print();
-		System.out.print("then");
+		System.out.print(" then");
 		ParseTree.indentCount++;
 		stmtSeq.print();
 		ParseTree.indentCount--;
 		if (prod == 2) {
-			System.out.println("else");
+			System.out.println("else ");
 			ParseTree.indentCount++;
 			elseStmtSeq.print();
 			ParseTree.indentCount--;

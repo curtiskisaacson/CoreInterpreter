@@ -49,11 +49,11 @@ public class Expression {
 			term.print();
 		} else if(prod ==2) {
 			term.print();
-			System.out.println("+");
+			System.out.print("+");
 			expression.print();
 		}else if(prod ==3) {
 			term.print();
-			System.out.println("-");
+			System.out.print("-");
 			expression.print();
 		}
 		
