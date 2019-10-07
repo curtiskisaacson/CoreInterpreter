@@ -61,7 +61,7 @@ public class CaseStatement {
 	
 	public void execute() {
 		
-		boolean caseFound = false;
+		
 		String name = declaredID.execute();
 		Map<Integer,Integer> casesAndValues = caseLine.execute();
 		

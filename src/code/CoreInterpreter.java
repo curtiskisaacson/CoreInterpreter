@@ -5,11 +5,12 @@ public class CoreInterpreter {
 
     public static void main(String[] args) {
 
-    	//String fileName = args[0];
-    	//String inputFileName = args[1];
+    	String fileName = args[0];
+    	String dataFileName = args[1];
         CoreScanner CS = null;
 		try {
-			CS = new CoreScanner("CoreFiles/CoreSourceAdding2Ints.core");
+			
+			CS = new CoreScanner(fileName);
 		} catch (FileNotFoundException e) {
 			System.out.println("ERROR : File Not Found");
 			System.exit(0);
@@ -20,7 +21,10 @@ public class CoreInterpreter {
         String[] tokens = CS.scan();
         tokens = CS.preprocess(tokens);
         
-        ParseTree parseTree = new ParseTree(tokens);
+        for(String t:tokens) {
+        	System.out.println(t);
+        }
+        ParseTree parseTree = new ParseTree(tokens, dataFileName);
         CoreParser coreParser = new CoreParser(parseTree);
         coreParser.parse();
         
@@ -29,9 +33,9 @@ public class CoreInterpreter {
         CorePrinter corePrinter = new CorePrinter(parseTree);
         corePrinter.print();
         
-        //CoreExecutor coreExecutor = new CoreExecutor(parseTree);
-        //coreExecutor.execute();
-        //System.out.println("\nEXECUTING COMPLETE");
+        CoreExecutor coreExecutor = new CoreExecutor(parseTree);
+        coreExecutor.execute();
+        
         
         
         

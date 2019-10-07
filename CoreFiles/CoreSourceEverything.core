@@ -11,7 +11,7 @@ begin
   output x;
   output y;
   
-  z := 2;
+  z := 9;
   case z of
       0 : 2
     | 2 : 3

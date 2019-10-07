@@ -1,5 +1,7 @@
 package code;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -29,20 +31,20 @@ public class InStatement {
 	}
 
 	public void execute() {
-		Scanner in = new Scanner(System.in);
+		
 
 		ArrayList<String> names = declaredIDList.execute();
 		for (String name : names) {
-			while (!in.hasNextInt()) {
-				in.next();
+			while (!ParseTree.dataFileIn.hasNextInt()) {
+				ParseTree.dataFileIn.next();
 			}
-			int value = in.nextInt();
+			int value = ParseTree.dataFileIn.nextInt();
 			// checks every character in string
 
 			ParseTree.symbolTable.put(name, value);
 		}
 		
-		in.close();
+		
 
 	}
 

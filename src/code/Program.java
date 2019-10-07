@@ -64,6 +64,7 @@ public class Program {
 		
 		System.out.println();
 		System.out.print("end");
+		System.out.println();
 		ParseTree.indentCount--;
 		
 	}

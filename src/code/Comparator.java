@@ -13,10 +13,8 @@ public class Comparator {
 	public void parse() {
 		firstExpression = new Expression();
 		firstExpression.parse();
-
-		if ((ParseTree.tokens[ParseTree.location].equals("EQUALS"))
-				|| ((ParseTree.tokens[ParseTree.location].equals("LESSTHAN"))
-						|| ((ParseTree.tokens[ParseTree.location].equals("LESSTHANOREQUALSTO"))))) {
+		String token = ParseTree.tokens[ParseTree.location];
+		if ( (token.equals("EQUALS")) || (token.equals("LESSTHAN")) || (token.equals("LESSTHANOREQUALTO"))) {
 			switch (ParseTree.tokens[ParseTree.location]) {
 
 			case "EQUALS":
@@ -31,7 +29,7 @@ public class Comparator {
 			}
 			ParseTree.location++;
 		} else {
-			System.out.println("ERROR: Comparator keyword expected and not Found");
+			System.out.println("ERROR: Comparator keyword:"+token+" expected and not Found");
 			System.exit(0);
 		}
 
